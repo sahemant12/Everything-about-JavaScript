@@ -1,0 +1,85 @@
+1. Runtime env: Nodejs, Bun, Deno all three are runtime env for js. And, they are designed to allow the Js to run outside of the browser.
+
+Q. Imp. method(learn later): call, bind, and apply.
+Q. Js execution context(From codefreeCamp) and hoisting: later
+Q. live HTMLCollection vs static Nodelist: Nodelist is not array. It is converted into array. Understand it later.
+
+4. High Order Function: If we use fn as a parameter for another fn or can return a fn then that fn is known as High order fn.
+
+5. prototype: prototype means extra properties and functionality in any given Datatypes. We can add any extra properties to any fn.
+    1. prototype:Array.prototype.name = value
+    2. prototype allows you to add new properties and methods to arrays. We can create our own function using prototype.
+    3. In JavaScript, prototypes are a foundational concept that allows objects to inherit properties and methods from other objects.
+    4. Prototype Chain: If a property or method is not found on an object, JavaScript looks up the chain to the object's prototype. child -> parent -> grandparent -> Object.prototype -> null
+    5. Classes are syntactic sugar over prototypes.
+    6. Are Classes Internally Based on Prototypes?
+Yes, classes in JavaScript are internally implemented using prototypes. The class syntax is syntactic sugar that makes it easier to write and read object-oriented code but does not change the underlying prototype-based behavior of JavaScript.
+
+6. The querySelector() method returns the first element that matches the specified css selectors.
+   The getElementById() method returns the first element that matches the given id in the DOM.
+
+7. querySelectorAll(): return `static nodelist` that also contains non-element.
+   class/Id: return `live HTMLCollection` that doesn't contain non-element.
+
+8. 1. Why We Write <script> Tags at the Bottom of <body>
+	ans: Placing the <script> tag at the bottom ensures that the HTML and CSS are fully loaded and rendered before the script runs.  If you place the 	script in the <head> or at the top of the <body>, it may block the loading of the HTML content because JavaScript execution can interrupt the 	rendering process.
+   2. When you use defer: The script is downloaded in parallel with the HTML but executed only after the HTML is fully parsed. This means you can place the 	<script> tag anywhere in the document (e.g., in the <head>), and the behavior remains the same.
+   3. When you use async: The script is downloaded in parallel with the HTML. It executes as soon as it finishes downloading, without waiting for the rest 	of the HTML to be parsed.It can run before, during, or after the HTML parsing, depending on when the script finishes downloading.
+
+9. JavaScript files are typically loaded through the Network tab in the browser's developer tools. How Later?
+
+10. Multiple setTimeout() work together.
+
+11. Projects related Notes:
+	1. How to build any projects?
+		1. First, write the approach that you are going to do. Write in details so that you will understand properly what to do.
+		2. Write the abstraction of the project. write fn(not internal details), which fn what will do and linked b/w them.
+	2. **data Attributes: storing extra information in HTML Elements. E.g: data-like=${data.uuid} //Here it is data-set. event.target.data will give   	     "like" that have uuid.
+	3. checkout about "this" in GamePlay Project.
+	4. 
+
+12. short cut: function Student(data) {
+    // this.firstName = data.firstName
+    // this.lastName = data.lastName
+    // this.age = data.age
+    Object.assign(this, data)
+}
+
+13. Components of a Request:
+	1. Path(URL)
+	2. Method: GET, POST
+	3. Body
+	4. Headers 
+
+14. 
+
+		
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

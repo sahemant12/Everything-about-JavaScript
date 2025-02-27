@@ -1,0 +1,7 @@
+JavaScript Array: Have 5 build-in properties/methods
+
+1. Constructor
+2. Static methods: E.g: Array.of()
+3. Static properties: E.g: Array[Symbol.species]
+2. Instance methods: E.g: Array.prototype.filter(), Array.prototype.map(), Array.prototype.reduce() etc.
+3. Instance properties: E.g: Array.length
