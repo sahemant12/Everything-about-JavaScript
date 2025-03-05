@@ -6,8 +6,8 @@
 
 const numbers = [1, 2, 3, 4];
 const doubled = numbers.map(num => num * 2);
-console.log(doubled); // Output: [2, 4, 6, 8]
-console.log(numbers);
+// console.log(doubled); // Output: [2, 4, 6, 8]
+// console.log(numbers);
 
 //e.g:2
 const rannumbers = [65, 44, 12, 4];
@@ -28,3 +28,25 @@ const newObj = {
 //     return num;
 // });
 // console.log(newArr);
+
+
+//polyfills of .map()
+const arr = [1, 3, 5, 8];
+// const newArr = arr.map((e)=>e*2);
+// console.log(newArr);
+
+if(!Array.prototype.myMap){
+    Array.prototype.myMap = function(myFn){
+        //return newArray
+        const mapArr = [];
+        for(let i=0; i<this.length; i++){
+            const value = myFn(this[i], i, this);            
+            mapArr.push(value);
+        }
+        return mapArr;
+    }
+}
+const result = arr.myMap((currValue, index, mainArr)=>{
+    return currValue * 2;
+})
+console.log(result);

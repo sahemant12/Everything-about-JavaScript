@@ -5,8 +5,21 @@
 //syntax: array.forEach(callback(currentValue, index, array), thisArg);
 
 const fruits = ['apple', 'banana', 'cherry'];
-fruits.forEach((currvalue, index, arr)=>{
-    console.log(`Element at index ${index}: ${currvalue}`);
-})
+// fruits.forEach((currvalue, index, arr)=>{
+//     console.log(`Element at index ${index}: ${currvalue}`);
+// })
 
-//polyfills
+//polyfills: forEach()
+if(!Array.prototype.myForEach){
+    Array.prototype.myForEach = function(userFn){
+        const originalArr = this;
+
+        for(let index = 0; index < originalArr.length; index++){
+            userFn(originalArr[index], index, originalArr);           
+        }
+    }
+}
+const result = fruits.myForEach((currvalue, index, arr)=>{
+    console.log(`Element at index ${index}: ${currvalue}, ${arr}`);
+})
+console.log(result);

@@ -11,3 +11,21 @@ const filterCheck = numbers2.filter((num, index, arr)=>{  //not work with object
     }
 })
 // console.log(filterCheck);
+
+//polyfills of filter()
+if(!Array.prototype.myFilter){
+    Array.prototype.myFilter = function(myFn){
+        const filterarray = [];
+        for(let i=0; i<this.length; i++){
+            const check = myFn(this[i], i);
+            if(check){
+                filterarray.push(this[i]);
+            }
+        }
+        return filterarray;
+    }
+}
+const result = numbers2.myFilter((currValue, index)=>{
+    return currValue>60;
+})
+console.log(result);
